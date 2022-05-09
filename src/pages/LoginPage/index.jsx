@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../../contexts/auth";
 
 const LoginPage = () => {
+  const { authenticated, login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("submit");
+    login(email, password);
   };
 
   return (
     <div className="flex flex-col content-center items-center justify-center mx-auto min-h-[60vh] max-w-xl bg-zinc-900 mt-12 rounded-md">
       <h1 className="mb-4 text-5xl font-bold"> Login do sistema</h1>
+      <p>{String(authenticated)} </p>
       <form className="w-full max-w-[480px] p-2 " onSubmit={handleSubmit}>
         <div className="mt-3">
           <label className="text-slate-100 text-lg" htmlFor="email">
