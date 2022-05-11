@@ -21,19 +21,19 @@ const Header = () => {
     <>
       <header className="px-2 py-1">
         <nav>
-          <div className="logo">
+          <div>
             <Link to="/">
               <h3 className="px-2 mr-4">Logo</h3>
             </Link>
           </div>
           <ul className="menu">
             <li>
-              <Link to="/about" href="">
-                Sobre
+              <Link to="/watchlist" href="">
+                Watchlist
               </Link>
             </li>
             <li>
-              <Link to="/contact">Contato</Link>
+              <Link to="/watched ">Watched</Link>
             </li>
           </ul>
         </nav>

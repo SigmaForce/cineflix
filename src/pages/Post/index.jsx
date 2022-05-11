@@ -9,7 +9,6 @@ const Post = () => {
   const { idMovie } = useParams();
 
   const [movie, setMovie] = useState([]);
-  const [gender, setGender] = useState([]);
 
   //console.log(idPost);
 

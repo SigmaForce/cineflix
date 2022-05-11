@@ -3,6 +3,7 @@ import Card from "../Card";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+import Header from "../../components/Header";
 
 const Search = () => {
   const { word_search } = useParams();
@@ -37,6 +38,7 @@ const Search = () => {
 
   return (
     <>
+      <Header />
       <section className="container">
         <h6 className="uppercase color-primary text-center">
           {search.length} resultados
