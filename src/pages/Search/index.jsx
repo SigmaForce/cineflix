@@ -2,7 +2,7 @@ import Card from "../Card";
 
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import api from "../../services/api";
+import { api } from "../../services/api";
 import Header from "../../components/Header";
 
 const Search = () => {

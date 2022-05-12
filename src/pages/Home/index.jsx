@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 //Figuras
 import star from "../../svg/icon-star.svg";
 //API
-import api from "../../services/api";
+import { api } from "../../services/api";
 //HOOKS
 import { useState, useEffect } from "react";
 import Card from "../Card";
