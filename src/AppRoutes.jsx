@@ -11,6 +11,7 @@ import { Watchlist } from "./components/Watchlist";
 import { GlobalProvider } from "./contexts/GlobalState";
 import { AuthProvider } from "./contexts/AuthProvider";
 import { ProtectedLayout } from "./components/ProtectedLayout";
+import Register from "./pages/Register";
 
 const AppRoutes = () => {
   return (
@@ -18,10 +19,10 @@ const AppRoutes = () => {
       <GlobalProvider>
         <Router>
           <Routes>
-            <Route exact path="/login" element={<LoginPage />}></Route>
+            <Route exact path="/" element={<LoginPage />}></Route>
             <Route
               exact
-              path="/"
+              path="/home"
               element={
                 <ProtectedLayout>
                   <Home />
@@ -52,6 +53,14 @@ const AppRoutes = () => {
                 <ProtectedLayout>
                   <Watchlist />
                 </ProtectedLayout>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+
+                  <Register />
+
               }
             />
           </Routes>

@@ -22,18 +22,18 @@ const Header = () => {
       <header className="px-2 py-1">
         <nav>
           <div>
-            <Link to="/">
+            <Link to="/home">
               <h3 className="px-2 mr-4">Logo</h3>
             </Link>
           </div>
           <ul className="menu">
             <li>
               <Link to="/watchlist" href="">
-                Watchlist
+                Minha Lista
               </Link>
             </li>
             <li>
-              <Link to="/watched ">Watched</Link>
+              <Link to="/watched ">Assistidos</Link>
             </li>
           </ul>
         </nav>
@@ -52,13 +52,13 @@ const Header = () => {
             </form>
           </div>
           <div className="cta-desktop ml-3">
-            <Link to="/login" className="btn">
-              Login
+            <Link to="/watchlist" className="btn">
+              Minha Lista
             </Link>
           </div>
           <div className="cta-mobile">
-            <Link to="/login" className="link color-primary">
-              Login
+            <Link to="/wacthed" className="link color-primary">
+              Assistidos
             </Link>
           </div>
         </div>
