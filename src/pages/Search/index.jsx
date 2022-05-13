@@ -62,7 +62,11 @@ const Search = () => {
         </form>
         <div className="row mt-4">
           {search.map((item) => {
-            return <Card key={item.id} content={item} />;
+            return (
+              <div className="grid-4 card p-0">
+                <Card key={item.id} content={item} />
+              </div>
+            );
           })}
         </div>
       </section>

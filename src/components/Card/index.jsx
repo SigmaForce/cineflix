@@ -30,7 +30,7 @@ const Card = ({ content, type }) => {
               alt={`${content.title} Poster`}
             />
           ) : (
-            <img src={NoImage} alt="Poster" />
+            <img className=" max-h-[360px]" src={NoImage} alt="Poster" />
           )}
         </Link>
       </div>
@@ -47,11 +47,15 @@ const Card = ({ content, type }) => {
           {type === "watchlist" ? (
             <div className="absolute bottom-4 p-2 flex justify-between">
               <button
-                className=" h-10 min-w-[64px] mx-3 bg-brand-500 rounded-md border-transparent  flex flex-1 justify-between items-center text-sm hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500"
+                className=" h-10 min-w-[152px] mr-2 bg-brand-500 rounded-md border-transparent  flex  gap-3 items-center  hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500"
                 disabled={watchedDisabled}
                 onClick={() => addMovieToWatched(content)}
               >
-                <Eye className="p-0 m-0" size={24} />
+                <div>
+                  {" "}
+                  <Eye className="ml-1" size={24}></Eye>
+                </div>
+                <div>Add to list</div>
               </button>
 
               <button
