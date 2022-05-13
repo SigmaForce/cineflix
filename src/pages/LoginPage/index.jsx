@@ -20,7 +20,7 @@ const LoginPage = () => {
   async function onSubmitForm(e) {
     e.preventDefault();
     try {
-      auth.authenticate(email, password);
+      await auth.authenticate(email, password);
       navigate("/home");
     } catch (error) {
       alert("Invalid Email or Password");
