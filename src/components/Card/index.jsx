@@ -47,7 +47,7 @@ const Card = ({ content, type }) => {
           {type === "watchlist" ? (
             <div className="absolute bottom-4 p-2 flex justify-between">
               <button
-                className=" h-10 min-w-[152px] mr-2 bg-brand-500 rounded-md border-transparent  flex  gap-3 items-center  hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500"
+                className=" h-10 min-w-[164px] mr-2 bg-brand-500 rounded-md border-transparent  flex  gap-3 items-center  hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500"
                 disabled={watchedDisabled}
                 onClick={() => addMovieToWatched(content)}
               >
@@ -55,7 +55,7 @@ const Card = ({ content, type }) => {
                   {" "}
                   <Eye className="ml-1" size={24}></Eye>
                 </div>
-                <div>Add to list</div>
+                <div>Add to watched</div>
               </button>
 
               <button
