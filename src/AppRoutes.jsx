@@ -14,12 +14,14 @@ import { ProtectedLayout } from "./components/ProtectedLayout";
 import Register from "./pages/Register";
 
 const AppRoutes = () => {
+
   return (
     <AuthProvider>
       <GlobalProvider>
         <Router>
           <Routes>
-            <Route exact path="/" element={<LoginPage />}></Route>
+            <Route exact path="/" element={<LoginPage />}>
+            </Route>
             <Route
               exact
               path="/home"
