@@ -3,7 +3,7 @@ import { GlobalContext } from "../../contexts/GlobalState";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Card from "../../pages/Card";
+import Card from "../Card";
 export const Watchlist = () => {
   const { watchlist } = useContext(GlobalContext);
   return (
@@ -16,7 +16,11 @@ export const Watchlist = () => {
         {watchlist.length > 0 ? (
           <div className="row mt-4">
             {watchlist.map((item) => {
-              return <Card key={item.id} content={item} type="watchlist" />;
+              return (
+                <div className="grid-4 card p-0">
+                  <Card key={item.id} content={item} type="watchlist" />
+                </div>
+              );
             })}
           </div>
         ) : (

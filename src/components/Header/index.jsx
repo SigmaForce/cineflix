@@ -1,16 +1,24 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../../contexts/AuthProvider/useAuth";
+
 const Header = () => {
   const initialValueForm = {
     search: "",
   };
   const [form, setForm] = useState(initialValueForm);
   const navigate = useNavigate();
+  const auth = useAuth();
   function onChange(event) {
     const { value, name } = event.target;
 
     setForm({ ...form, [name]: value });
     console.log(form);
+  }
+
+  function handleLogout() {
+    auth.logout();
+    navigate("/");
   }
 
   function handleSearch(e) {
@@ -51,41 +59,19 @@ const Header = () => {
               <button className="btn-search"></button>
             </form>
           </div>
-          <div className="cta-desktop ml-3">
-            <Link to="/watchlist" className="btn">
-              Minha Lista
-            </Link>
-          </div>
-          <div className="cta-mobile">
-            <Link to="/wacthed" className="link color-primary">
-              Assistidos
-            </Link>
+          <div className="ml-3">
+            {!auth.email ? (
+              <Link to="/" className="btn min-w-[130px]  ">
+                Login
+              </Link>
+            ) : (
+              <button className="btn min-w-[130px]" onClick={handleLogout}>
+                Sair
+              </button>
+            )}
           </div>
         </div>
       </header>
-
-      <div className="relative">
-        <div className="menu-mobile">
-          <ul className="nav-mobile">
-            <li>
-              <Link to="/about" className="link-menu-mobile">
-                Sobre
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="link-menu-mobile">
-                Contato
-              </Link>
-            </li>
-            <li className="py-2 px-2">
-              <form className="flex">
-                <input type="text" name="search" placeholder="Buscar..." />
-                <button className="btn-search"></button>
-              </form>
-            </li>
-          </ul>
-        </div>
-      </div>
     </>
   );
 };

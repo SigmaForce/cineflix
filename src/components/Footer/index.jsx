@@ -10,18 +10,18 @@ const Footer = () => {
         <section className="container pb-0">
           <div className="row pb-4 bb-black">
             <div className="grid-3">
-              <h4>Posts</h4>
+              <h4>Filmes</h4>
               <div className="flex-start-column mt-2">
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Mais Vistos
                 </a>
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Mais Comentados
                 </a>
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Mais Populares
                 </a>
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Mais Recentes
                 </a>
               </div>
@@ -29,16 +29,16 @@ const Footer = () => {
             <div className="grid-3">
               <h4>Categorias</h4>
               <div className="flex-start-column mt-2">
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   (99) 99999-9999
                 </a>
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Séries
                 </a>
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Filmes
                 </a>
-                <a href="" className="color-gray link-footer">
+                <a href="#" className="color-gray link-footer">
                   Cinema
                 </a>
               </div>
@@ -66,7 +66,7 @@ const Footer = () => {
             <div className="grid-9">
               <p>2022 |Todos os direitos Reservados. </p>
             </div>
-            <div className="grid-3">
+            <div className="grid-3 flex">
               <img src={facebook} alt="" className="icon-s" />
               <img src={instagram} alt="" className="icon-s ml-2" />
               <img src={youtube} alt="" className="icon-s ml-2" />

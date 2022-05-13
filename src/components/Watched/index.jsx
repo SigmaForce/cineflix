@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalState";
-import Card from "../../pages/Card";
+import Card from "../Card";
 import Footer from "../Footer";
 import Header from "../Header";
 
@@ -17,7 +17,11 @@ const Watched = () => {
         {watched.length > 0 ? (
           <div className="row mt-4">
             {watched.map((item) => {
-              return <Card key={item.id} content={item} type="watched" />;
+              return (
+                <div className="grid-4 card p-0">
+                  <Card key={item.id} content={item} type="watched" />
+                </div>
+              );
             })}
           </div>
         ) : (

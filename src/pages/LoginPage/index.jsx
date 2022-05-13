@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useAuth } from "../../contexts/AuthProvider/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const auth = useAuth();
@@ -18,11 +18,10 @@ const LoginPage = () => {
   }
 
   async function onSubmitForm(e) {
-
     e.preventDefault();
     try {
-      await auth.authenticate(email, password);
-      navigate("/");
+      auth.authenticate(email, password);
+      navigate("/home");
     } catch (error) {
       alert("Invalid Email or Password");
     }
@@ -52,7 +51,16 @@ const LoginPage = () => {
                 placeholder="Digite sua senha"
                 onChange={onChangePassword}
               />
-              <button className="btn w-100 mt-4">Entrar</button>
+              <div className="row mt-2">
+                <span className="p1 text-zinc-100">
+                  {" "}
+                  Não tem uma Conta? &nbsp;
+                </span>
+                <Link to="/register" className="link">
+                  Registre-se
+                </Link>
+              </div>
+              <button className="btn w-100 mt-1">Entrar</button>
             </form>
           </div>
           <div className="grid-4 disappear"></div>

@@ -38,7 +38,14 @@ const AppRoutes = () => {
                 </ProtectedLayout>
               }
             ></Route>
-            <Route path="/post/:idMovie" element={<Post />} />
+            <Route
+              path="/post/:idMovie"
+              element={
+                <ProtectedLayout>
+                  <Post />
+                </ProtectedLayout>
+              }
+            />
             <Route
               path="/watched"
               element={
@@ -55,14 +62,7 @@ const AppRoutes = () => {
                 </ProtectedLayout>
               }
             />
-            <Route
-              path="/register"
-              element={
-
-                  <Register />
-
-              }
-            />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Router>
       </GlobalProvider>
