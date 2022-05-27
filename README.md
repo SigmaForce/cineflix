@@ -14,7 +14,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * [Sass](https://sass-lang.com/)
 * [TailWindCSS](https://tailwindcss.com/)
 
-
+## Disponivel Em:
+[CineFlix](https://cineflix-orcin.vercel.app/)
 
 ## Para Rodar o Sistema
 
