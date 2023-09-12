@@ -9,6 +9,20 @@ export const userApi = axios.create({
   baseURL: "https://reqres.in/api/",
 });
 
+
+api.interceptors.request.use(
+  (config) => {
+    const user = getUserLocalStorage();
+    if (user) {
+      config.headers.Authorization = `Bearer ${process.env.REACT_APP_API_TOKEN}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 userApi.interceptors.request.use(
   (config) => {
     const user = getUserLocalStorage();
