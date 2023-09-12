@@ -12,10 +12,7 @@ export const userApi = axios.create({
 
 api.interceptors.request.use(
   (config) => {
-    const user = getUserLocalStorage();
-    if (user) {
-      config.headers.Authorization = `Bearer ${process.env.REACT_APP_API_TOKEN}`;
-    }
+    config.headers.Authorization = `Bearer ${process.env.REACT_APP_API_TOKEN}`;
     return config;
   },
   (error) => {
